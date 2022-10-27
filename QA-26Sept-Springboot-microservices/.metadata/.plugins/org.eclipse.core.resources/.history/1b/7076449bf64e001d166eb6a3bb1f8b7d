@@ -1,0 +1,9 @@
+package com.example;
+
+public class Person {
+	
+	static String Name="Owais Ghafoor";
+	static int Age=25;
+	
+
+}

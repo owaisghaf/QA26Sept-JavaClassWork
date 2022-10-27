@@ -1,0 +1,14 @@
+package com.example;
+
+public class Person {
+	
+	static String Name="Owais Ghafoor";
+	static int Age=25;
+	
+	public static String Name() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

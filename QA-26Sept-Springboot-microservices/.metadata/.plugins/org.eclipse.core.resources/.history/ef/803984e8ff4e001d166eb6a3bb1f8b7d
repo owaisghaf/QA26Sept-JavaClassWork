@@ -1,0 +1,17 @@
+package com.example.mybeans;
+
+public class Book {
+	
+	@min(3)
+	public int id;
+	
+	public String title;
+	
+	public int price;
+	
+	public String author;
+	
+	public int qty;
+	
+
+}

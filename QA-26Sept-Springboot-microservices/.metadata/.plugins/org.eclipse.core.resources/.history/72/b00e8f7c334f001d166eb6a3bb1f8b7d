@@ -1,0 +1,19 @@
+package com.example.laptops;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.example.Storage.laptop;
+import com.example.Storage.storage;
+
+public class Dell implements laptop{
+	
+	@Autowired
+	@Qualifier("500GB")
+	storage sto;
+	public String Storage() {
+		
+		return sto.Storage();
+	}
+
+}

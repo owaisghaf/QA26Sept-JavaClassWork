@@ -1,0 +1,52 @@
+package com.example;
+
+import java.time.LocalTime;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+//@SpringBootApplication
+public class MyfirstSpringApplication {
+
+	public static void main(String[] args) {
+		//SpringApplication.run(MyfirstSpringApplication.class, args);
+	
+	    ApplicationContext context = SpringApplication.run(Appconfig.class, args);
+
+	    // calls greeting Bean outlined in Appconfig
+	    
+	    Object byName = context.getBean("greeting");
+	    String byType = context.getBean(String.class);
+	    String byBoth = context.getBean("greeting", String.class);
+	    
+	    System.out.println(byName);
+	    System.out.println(byType);
+	    System.out.println(byBoth);
+	    
+	    // calls LocalTime Bean outlined in Appconfig
+	    
+	    Object byName1 = context.getBean("show");
+	    LocalTime byType1 = context.getBean(LocalTime.class);
+	    LocalTime byBoth1 = context.getBean("show", LocalTime.class);
+	    
+	    System.out.println(byName1);
+	    System.out.println(byType1);
+	    System.out.println(byBoth1);
+	    
+	    // calls Person class and constructors outlined as bean
+	    
+	    Object byName2 = context.getBean("showPerson");
+	    Person byType2 = context.getBean(Person.class);
+	    Person byBoth2 = context.getBean("showPerson", Person.class);
+
+	    System.out.println(byName2);
+	    System.out.println(byType2);
+	    System.out.println(byBoth2);
+	    
+
+	    
+	}
+
+}

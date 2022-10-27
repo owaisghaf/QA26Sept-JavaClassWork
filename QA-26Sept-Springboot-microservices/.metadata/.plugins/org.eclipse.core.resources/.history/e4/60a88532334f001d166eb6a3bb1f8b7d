@@ -1,0 +1,20 @@
+package com.example.laptops;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.example.Storage.laptop;
+import com.example.interfaces.HDD1TB;
+import com.example.interfaces.HDD500GB;
+
+public class Apple implements laptop{
+	
+	@Autowired
+	@Qualifier("1TB")
+	storage sto;
+	public String Storage() {
+		
+		return sto.Storage();
+
+}
+}

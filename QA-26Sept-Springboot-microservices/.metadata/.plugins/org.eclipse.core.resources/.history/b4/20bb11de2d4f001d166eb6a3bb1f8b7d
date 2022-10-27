@@ -1,0 +1,9 @@
+package com.example.interfaces;
+
+import org.springframework.stereotype.Component;
+
+@Component // This generates Engine bean
+public interface Engine {
+	public String spec();
+
+}

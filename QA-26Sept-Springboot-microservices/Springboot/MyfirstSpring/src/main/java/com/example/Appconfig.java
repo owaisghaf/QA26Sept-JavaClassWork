@@ -1,0 +1,52 @@
+package com.example;
+
+import java.time.LocalTime;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+import com.example.mybeans.Book;
+import com.example.mybeans.Person;
+import com.example.mybeans.Product;
+import com.example.mybeans.Profile;
+
+@Configuration
+public class Appconfig {
+
+	@Bean
+	@Scope("prototype")
+	public String greeting() {
+		return "Hello, World";
+	}
+
+	@Bean
+	@Scope("prototype")
+	public LocalTime show() {
+		return LocalTime.now();
+	}
+
+	@Bean
+	@Scope("prototype")
+	public Product showProduct() {
+		return new Product("Iphone", 1000);
+	}
+
+	@Bean
+	@Scope("prototype")
+	public Person showPerson() {
+		return new Person("Owais", 25);
+	}
+
+	@Bean
+	@Scope("prototype")
+	public Book showBook() {
+		return new Book(101, "Harry Potter", 15, "JK Rowling", 10000);
+	}
+
+	@Bean
+	@Scope("prototype")
+	public Profile showProfile() {
+		return new Profile("Owais", "Ghafoor", "31-05-1997", "Male", "Paki");
+	}
+}

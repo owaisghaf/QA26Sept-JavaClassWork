@@ -1,0 +1,10 @@
+package com.example.engines;
+
+import com.example.interfaces.Engine;
+
+public class v6 implements Engine{
+	public String spec()
+	{
+		return "V6";
+	}
+}

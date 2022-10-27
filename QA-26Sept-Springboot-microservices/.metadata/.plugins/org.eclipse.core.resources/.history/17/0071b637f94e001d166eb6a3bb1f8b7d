@@ -1,0 +1,19 @@
+package com.example.mybeans;
+
+public class Product {
+	
+	String Name;
+	int Age;
+	public Product(String name, int age) {
+		super();
+		this.Name = name;
+		this.Age = age;
+	}
+	@Override
+	public String toString() {
+		return "Person [Name=" + Name + ", Age=" + Age + "]";
+	}
+
+	
+
+}

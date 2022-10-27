@@ -1,0 +1,15 @@
+package com.example;
+
+public class Person {
+	
+	static String Name="Owais Ghafoor";
+	static int Age=25;
+	
+public static void main(String[] args) {
+	
+	System.out.println("my name is "+Name+" and I am "+Age+" years old");
+}
+	
+
+	
+}

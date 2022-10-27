@@ -1,0 +1,27 @@
+package arrays;
+
+import java.util.Scanner;
+
+public class ArrrayExample2 {
+	
+	public static void main(String[] args) {
+		String[] city=new String[5];
+		Scanner scn=new Scanner(System.in);
+		System.out.println("enter name of cities");
+		for(int i=0;i<city.length;i++)
+		{
+			city[i]=scn.next();
+		}
+		System.out.println("List of cities");
+		for(int i=0;i<city.length;i++)
+		{
+			System.out.println(city[i]);
+		}
+		
+		//enhance for loop array for loop
+		for(String x:city)
+		{
+			System.out.println(x);
+		}
+	}
+}

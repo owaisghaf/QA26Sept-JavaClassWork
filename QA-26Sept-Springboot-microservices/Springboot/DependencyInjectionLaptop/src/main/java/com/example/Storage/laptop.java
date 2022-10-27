@@ -1,0 +1,6 @@
+package com.example.Storage;
+
+public interface laptop {
+	public String spec();
+
+}

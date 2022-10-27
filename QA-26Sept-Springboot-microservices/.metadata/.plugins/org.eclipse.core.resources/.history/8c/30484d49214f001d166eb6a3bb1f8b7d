@@ -1,0 +1,41 @@
+package com.example.mybeans;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+public class Profile {
+	
+	@Size(min=2,max=30)
+	String forename;
+	
+	@Size(min=2,max=30)
+	String surname;
+	
+	@Pattern(regexp = "\\\\d{2}-\\\\d{2}-\\\\\\\\d{4}")
+	double dateofbirth;
+	
+	@NotNull
+	String gender;
+	
+	@NotNull
+	String ethnicity;
+	
+	public Profile(String forename, String surname, double dateofbirth, String gender, String ethnicity) {
+		super();
+		this.forename = forename;
+		this.surname = surname;
+		this.dateofbirth = dateofbirth;
+		this.gender = gender;
+		this.ethnicity = ethnicity;
+	}
+	@Override
+	public String toString() {
+		return "Profile [forename=" + forename + ", surname=" + surname + ", dateofbirth=" + dateofbirth + ", gender="
+				+ gender + ", ethnicity=" + ethnicity + "]";
+	}
+	
+	
+
+
+}

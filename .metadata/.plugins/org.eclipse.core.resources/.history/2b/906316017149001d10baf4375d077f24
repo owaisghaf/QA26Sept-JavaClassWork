@@ -1,0 +1,12 @@
+package fileIO;
+
+import java.io.FileReader;
+import java.io.Reader;
+
+public class ReaderExample {
+	public static void main(String[] args) {
+		
+	}
+		Reader r=new FileReader("C:\\Users\\Owais\\eclipse-workspace\\QAFiles\\owais.txt");
+
+}

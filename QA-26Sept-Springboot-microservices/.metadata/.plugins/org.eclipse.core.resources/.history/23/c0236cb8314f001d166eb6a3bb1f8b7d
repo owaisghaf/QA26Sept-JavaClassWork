@@ -1,0 +1,12 @@
+package com.example.interfaces;
+
+import org.springframework.stereotype.Component;
+
+@Component("500GB")
+public interface HDD500GB {
+	public String storage() {
+	
+	return "500GB";
+
+	}
+}

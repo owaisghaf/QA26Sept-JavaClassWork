@@ -1,0 +1,12 @@
+package com.example.cars;
+
+import com.example.interfaces.Car;
+
+public class AUDI implements Car{
+	public String spec()
+	{
+		System.out.println("This car has");
+		return "";
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.example.cars;
+
+import org.springframework.stereotype.Component;
+
+@Component // This generates Engine bean
+public class Engine {
+	public String spec="v8 engine";
+
+}

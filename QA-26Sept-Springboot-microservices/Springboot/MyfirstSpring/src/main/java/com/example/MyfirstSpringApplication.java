@@ -1,0 +1,91 @@
+package com.example;
+
+import java.time.LocalTime;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+import com.example.mybeans.Book;
+import com.example.mybeans.Person;
+import com.example.mybeans.Product;
+import com.example.mybeans.Profile;
+
+//@SpringBootApplication
+public class MyfirstSpringApplication {
+
+	public static void main(String[] args) {
+		//SpringApplication.run(MyfirstSpringApplication.class, args);
+	
+	    ApplicationContext context = SpringApplication.run(Appconfig.class, args);
+
+	    // calls greeting Bean outlined in Appconfig
+	    
+	    Object byName = context.getBean("greeting");
+	    String byType = context.getBean(String.class);
+	    String byBoth = context.getBean("greeting", String.class);
+	    
+	    System.out.println(byName);
+	    System.out.println(byType);
+	    System.out.println(byBoth);
+	    System.out.println("--------------------");
+	    
+	    // calls LocalTime Bean outlined in Appconfig
+	    
+	    Object byName1 = context.getBean("show");
+	    LocalTime byType1 = context.getBean(LocalTime.class);
+	    LocalTime byBoth1 = context.getBean("show", LocalTime.class);
+	    
+	    System.out.println(byName1);
+	    System.out.println(byType1);
+	    System.out.println(byBoth1);
+	    System.out.println("--------------------");
+
+	    
+	    // calls Person class and constructors outlined as bean
+	    
+	    Object byName2 = context.getBean("showPerson");
+	    Person byType2 = context.getBean(Person.class);
+	    Person byBoth2 = context.getBean("showPerson", Person.class);
+
+	    System.out.println(byName2);
+	    System.out.println(byType2);
+	    System.out.println(byBoth2);
+	    System.out.println("--------------------");
+	    
+	    // calls Product class and constructors outlined as bean
+	    
+	    Object byName3 = context.getBean("showProduct");
+	    Product byType3 = context.getBean(Product.class);
+	    Product byBoth3 = context.getBean("showProduct", Product.class);
+
+	    System.out.println(byName3);
+	    System.out.println(byType3);
+	    System.out.println(byBoth3);
+	    System.out.println("--------------------");
+
+	    // calls Book class and constructors outlined with constrained variable limits set
+	    
+	    Object byName4 = context.getBean("showBook");
+	    Book byType4 = context.getBean(Book.class);
+	    Book byBoth4 = context.getBean("showBook", Book.class);
+
+	    System.out.println(byName4);
+	    System.out.println(byType4);
+	    System.out.println(byBoth4);
+	    System.out.println("--------------------");
+
+	    // calls Profile class and constructors outlined with constrained variable limits set
+	    
+	    Object byName5 = context.getBean("showProfile");
+	    Profile byType5 = context.getBean(Profile.class);
+	    Profile byBoth5 = context.getBean("showProfile", Profile.class);
+
+	    System.out.println(byName5);
+	    System.out.println(byType5);
+	    System.out.println(byBoth5);
+	    System.out.println("--------------------");
+	}
+
+}

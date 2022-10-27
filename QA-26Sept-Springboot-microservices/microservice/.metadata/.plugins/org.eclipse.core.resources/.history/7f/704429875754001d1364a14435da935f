@@ -1,0 +1,3 @@
+spring.application.name=apple
+server.port=8084
+

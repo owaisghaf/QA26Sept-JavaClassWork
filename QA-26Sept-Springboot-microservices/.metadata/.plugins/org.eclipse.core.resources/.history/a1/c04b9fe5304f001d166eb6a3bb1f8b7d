@@ -1,0 +1,7 @@
+package com.example.laptops;
+
+import com.example.interfaces.laptop;
+
+public class Dell implements laptop{
+
+}

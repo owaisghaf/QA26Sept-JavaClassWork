@@ -1,0 +1,28 @@
+package mapExample;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapTest {
+	public static void main(String[] args) {
+		Map<Integer, String> mymap = new HashMap();
+		mymap.put(101, "owais");
+		mymap.put(102, "Lara");
+		mymap.put(103, "abu");
+		mymap.put(104, "sharjel");
+		mymap.put(105, "fidha");
+		mymap.put(105, "fidha");
+		for(Map.Entry m:mymap.entrySet()) {
+			System.out.println(m.getKey() + "---" + m.getValue());
+		}
+		
+		// String[] names= {"nnn", "mmm", "lll"};
+		// for(String x:names)
+		// {
+		// sysout(x)
+		// }
+		
+		
+	}
+
+}
